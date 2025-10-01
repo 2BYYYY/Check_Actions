@@ -12,6 +12,6 @@ jobs:
 
       - name: Print secret
         env:
-          VAR_1: ${{ secrets.VAR_1 }}
+          var_1: ${{ secrets.var_1 }}
         run: |
-          echo "Secret value is $VAR_1"
+          echo "Secret value is $var_1"
