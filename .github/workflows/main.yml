@@ -6,6 +6,7 @@ on:
 jobs:
   show-secret:
     runs-on: ubuntu-latest
+    # Only needed for environment secrets
     environment: test_env_var
     env:
       VAR_1: ${{ secrets.VAR_1 }}
