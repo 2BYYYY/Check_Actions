@@ -6,12 +6,11 @@ on:
 jobs:
   show-secret:
     runs-on: ubuntu-latest
+    env:
+      VAR_1: ${{ secrets.VAR_1 }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Print secret
-        env:
-          var_1: ${{ secrets.var_1 }}
-        run: |
-          echo "Secret value is $var_1"
+        run: echo "Secret value is $VAR_1"
